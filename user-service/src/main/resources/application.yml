@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fooddelivery
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    createDatabaseIfNotExist: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B59
+  expiration-ms: 86400000
+
+logging:
+  level:
+    com.foodapp.user: DEBUG

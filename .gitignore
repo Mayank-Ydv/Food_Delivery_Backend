@@ -1,0 +1,9 @@
+target/
+*.class
+.idea/
+*.iml
+.env
+*.log
+.DS_Store
+HELP.md
+.vscode/settings.json

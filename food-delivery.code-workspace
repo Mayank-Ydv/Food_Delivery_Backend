@@ -1,0 +1,15 @@
+{
+  "folders": [
+    { "name": "api-gateway", "path": "api-gateway" },
+    { "name": "user-service", "path": "user-service" },
+    { "name": "restaurant-service", "path": "restaurant-service" },
+    { "name": "order-service", "path": "order-service" },
+    { "name": "delivery-service", "path": "delivery-service" },
+    { "name": "notification-service", "path": "notification-service" }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "editor.formatOnSave": true,
+    "java.saveActions.organizeImports": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DeliveryServiceApplication",
+            "request": "launch",
+            "mainClass": "com.foodapp.delivery.DeliveryServiceApplication",
+            "projectName": "delivery-service"
+        },
+        {
+            "type": "java",
+            "name": "NotificationServiceApplication",
+            "request": "launch",
+            "mainClass": "com.foodapp.notification.NotificationServiceApplication",
+            "projectName": "notification-service"
+        },
+        {
+            "type": "java",
+            "name": "OrderServiceApplication",
+            "request": "launch",
+            "mainClass": "com.foodapp.order.OrderServiceApplication",
+            "projectName": "order-service"
+        },
+        {
+            "type": "java",
+            "name": "RestaurantServiceApplication",
+            "request": "launch",
+            "mainClass": "com.foodapp.restaurant.RestaurantServiceApplication",
+            "projectName": "restaurant-service"
+        },
+        {
+            "type": "java",
+            "name": "GatewayApplication",
+            "request": "launch",
+            "mainClass": "com.foodapp.gateway.GatewayApplication",
+            "projectName": "api-gateway"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserServiceApplication<user-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.foodapp.user.UserServiceApplication",
+            "projectName": "user-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
