@@ -12,6 +12,17 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
         spring.json.value.default-type: "com.foodapp.order.kafka.OrderEventPayload"
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ymayank832@gmail.com
+    password: qfpw ntso nbpv qnmr # Google App Password (not your real Gmail password)
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 logging:
   level:

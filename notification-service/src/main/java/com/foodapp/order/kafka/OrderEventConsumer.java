@@ -29,16 +29,27 @@ public class OrderEventConsumer {
         this.smsService = smsService;
     }
 
-    @KafkaListener(topics = "order-events", groupId = "notification-group")
+    // @KafkaListener(topics = "order-events", groupId = "notification-group")
+    // public void onOrderEvent(OrderEventPayload event) {
+    //     System.out.println("Received Kafka event: " + event);
+
+    //     String message = buildMessageForStatus(event.getStatus());
+
+    //     emailService.sendEmail(event.getUserId(), message);
+    //     smsService.sendSms(event.getUserId(), message);
+    // }
+@KafkaListener(topics = "order-events", groupId = "notification-group")
     public void onOrderEvent(OrderEventPayload event) {
         System.out.println("Received Kafka event: " + event);
 
         String message = buildMessageForStatus(event.getStatus());
 
-        emailService.sendEmail(event.getUserId(), message);
+        // userId ki jagah actual recipient email string pass karein
+        String recipientEmail = "your-actual-email@gmail.com"; 
+
+        emailService.sendEmail(recipientEmail, message);
         smsService.sendSms(event.getUserId(), message);
     }
-
     private String buildMessageForStatus(String status) {
         return switch (status) {
             case "PLACED" -> "Your order has been placed successfully!";
